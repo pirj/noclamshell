@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+while true; do
+  # pmset -g powerstate | grep AppleBacklightDisplay
+  ioreg -r -k AppleClamshellState | grep AppleClamshellState | grep Yes && pmset sleepnow && sleep 20
+  sleep 2
+done
