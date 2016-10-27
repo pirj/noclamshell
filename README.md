@@ -17,8 +17,30 @@ Some discussion threads [from](https://discussions.apple.com/thread/3196000) [ba
 
 ## Less fuss
 
+Imagine a magic script that monotors your lid state, and when it is closed, puts your machine to sleep.
+Here it is!
+
+## Installation
+
+Put the executable file `noclamshell` to `~/.bin` directory. Then put noclamshell.plist to ~/Library/LaunchAgents.
+So this is basically the installation script:
+
+    git clone --depth 1 https://github.com/pirj/noclamshell
+    cd noclamshell
+    mkdir -p ~/.bin
+    cp noclamshell ~/.bin
+    cp noclamshell.plist ~/Library/LaunchAgents
+    launchctl load ~/Library/LaunchAgents/noclamshell.plist
+    launchctl start noclamshell
+
+## Hope for deliverance
+
+I hope one day this repo will get required number of watchers, stars and forks to get into homebrew, and then:
+
     brew install noclamshell
     brew services start noclamshell
+
+But not just yet.
 
 ## How does this work
 
