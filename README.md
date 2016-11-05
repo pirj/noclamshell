@@ -17,7 +17,7 @@ Some discussion threads [from](https://discussions.apple.com/thread/3196000) [ba
 
 ## Less fuss
 
-Imagine a magic script that monotors your lid state, and when it is closed, puts your machine to sleep.
+Imagine a magic script that monitors your lid state, and when it is closed, puts your machine to sleep.
 Here it is!
 
 ## Installation
