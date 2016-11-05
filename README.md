@@ -31,7 +31,6 @@ So this is basically the installation script:
     cp noclamshell ~/.bin
     cp noclamshell.plist ~/Library/LaunchAgents
     launchctl load ~/Library/LaunchAgents/noclamshell.plist
-    launchctl start noclamshell
 
 ## Hope for deliverance
 
