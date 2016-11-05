@@ -3,18 +3,16 @@
 <plist version="1.0">
   <dict>
     <key>Label</key>
-    <string>noclamshell</string>
+      <string>noclamshell</string>
     <key>RunAtLoad</key>
-    <true/>
+      <true/>
     <key>KeepAlive</key>
-    <true/>
+      <true/>
     <key>ProgramArguments</key>
-    <array>
-      <string>~/.bin/noclamshell</string>
-    </array>
-    <key>StandardErrorPath</key>
-    <string>/dev/null</string>
-    <key>StandardOutPath</key>
-    <string>/dev/null</string>
+      <array>
+        <string>bash</string>
+        <string>-c</string>
+        <string>~/.bin/noclamshell</string>
+      </array>
   </dict>
 </plist>
