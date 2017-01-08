@@ -1,22 +1,6 @@
 #!/usr/bin/env bash
 
-STATE=awake
-while true; do
-  # Yet another way to detect closed clamshell mode, BacklitDisplay disappears from the list
-  # CLOSED=$(pmset -g powerstate | grep AppleBacklightDisplay)
-  CLOSED=$(ioreg -r -k AppleClamshellState | grep AppleClamshellState | grep Yes)
-  if [ -z "$CLOSED" ]; then STATE=awake; fi
-  if [ "$CLOSED" ]; then
-    # Only put machine to sleep unless sleeping already (in case of power nap etc)
-    if [ "$STATE" = "awake" ]; then
-      STATE=sleeping;
-      # This is not documented, pmset puts machine to sleep after script/shell exits, so
-      # it works fine from command line or a one-off script, but fails in a loop,
-      # sometimes ending up in a stall state so that only reboot helps.
-      # Running it in a subshell works fine.
-      (pmset sleepnow &)
-    fi
-  fi
-  # Don't check for closed lid too often, it feels immediate anyway
-  sleep 2
-done
+CLAMSHELL=$(ioreg -r -k AppleClamshellState | grep AppleClamshellState | grep Yes)
+if [ "$CLAMSHELL" ]; then
+  pmset sleepnow
+fi
