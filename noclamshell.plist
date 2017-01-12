@@ -3,7 +3,8 @@
 <plist version="1.0">
   <dict>
     <key>Label</key><string>noclamshell</string>
-    <key>StartInterval</key> <integer>2</integer>
+    <key>ThrottleInterval</key> <integer>2</integer>
+    <key>KeepAlive</key> <true/>
     <key>ProgramArguments</key>
       <array>
         <string>bash</string>
