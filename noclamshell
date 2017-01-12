@@ -2,5 +2,5 @@
 
 CLAMSHELL=$(ioreg -r -k AppleClamshellState | grep AppleClamshellState | grep Yes)
 if [ "$CLAMSHELL" ]; then
-  pmset sleepnow
+  (pmset sleepnow &); sleep 10
 fi
