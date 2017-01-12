@@ -32,6 +32,18 @@ So this is basically the installation script:
     cp noclamshell.plist ~/Library/LaunchAgents
     launchctl load ~/Library/LaunchAgents/noclamshell.plist
 
+## Uninstall
+
+In case utility didn't work as you expected, you can turn it off:
+
+    launchctl unload ~/Library/LaunchAgents/noclamshell.plist
+
+Please drop me a note on what went wrong!
+
+## Self-ad
+
+I also maintain [an utility that reduces the brightness of internal display](https://github.com/pirj/nobacklight) to zero when lid is open. Appreciate if you check it out!
+
 ## Hope for deliverance
 
 I hope one day this repo will get required number of watchers, stars and forks to get into homebrew, and then:
