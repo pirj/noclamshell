@@ -61,4 +61,6 @@ It periodically checks if lid is closed and puts machine to sleep. Nothing fancy
 
 Author: Phil Pirozhkov
 
+Contributors: @benbosman
+
 License: MIT

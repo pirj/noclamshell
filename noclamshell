@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 
 CLAMSHELL=$(ioreg -r -k AppleClamshellState | grep AppleClamshellState | grep Yes)
+FLAG_FILE=$TMPDIR/noclamshell.lid.closed.and.sleeping
+
 if [ "$CLAMSHELL" ]; then
-  (pmset sleepnow &); sleep 10
+  if [[ ! -f $FLAG_FILE ]]; then
+    touch $FLAG_FILE
+    pmset sleepnow
+  fi
+else
+  rm -f $FLAG_FILE
 fi
