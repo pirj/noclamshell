@@ -20,42 +20,27 @@ Some discussion threads [from](https://discussions.apple.com/thread/3196000) [ba
 Imagine a magic script that monitors your lid state, and when it is closed, puts your machine to sleep.
 Here it is!
 
+## How does this work
+
+It periodically checks if lid is closed and puts machine to sleep. Nothing fancy, it uses command line tools that come with OSX, specifically `ioreg`, which displays I/O registry and `pmset` to manipulate power management settings.
+
 ## Installation
 
-Put the executable file `noclamshell` to `~/.bin` directory. Then put noclamshell.plist to ~/Library/LaunchAgents.
-So this is basically the installation script:
-
-    git clone --depth 1 https://github.com/pirj/noclamshell
-    cd noclamshell
-    mkdir -p ~/.bin
-    cp noclamshell ~/.bin
-    cp noclamshell.plist ~/Library/LaunchAgents
-    launchctl load ~/Library/LaunchAgents/noclamshell.plist
+    brew install pirj/homebrew-noclamshell/noclamshell
+    brew services start noclamshell
 
 ## Uninstall
 
 In case utility didn't work as you expected, you can turn it off:
 
-    launchctl unload ~/Library/LaunchAgents/noclamshell.plist
+    brew services stop noclamshell
+    brew uninstall pirj/homebrew-noclamshell/noclamshell
 
 Please drop me a note on what went wrong!
 
 ## Self-ad
 
 I also maintain [an utility that reduces the brightness of internal display](https://github.com/pirj/nobacklight) to zero when lid is open. Appreciate if you check it out!
-
-## Hope for deliverance
-
-I hope one day this repo will get required number of watchers, stars and forks to get into homebrew, and then:
-
-    brew install noclamshell
-    brew services start noclamshell
-
-But not just yet.
-
-## How does this work
-
-It periodically checks if lid is closed and puts machine to sleep. Nothing fancy, it uses command line tools that come with OSX, specifically `ioreg`, which displays I/O registry and `pmset` to manipulate power management settings.
 
 ## Blah
 
