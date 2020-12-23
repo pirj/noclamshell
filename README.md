@@ -46,6 +46,8 @@ I also maintain [an utility that reduces the brightness of internal display](htt
 
 Author: Phil Pirozhkov
 
-Contributors: @benbosman
+Contributors:
+ - Ben Bosman [@benbosman](https://github.com/benbosman)
+ - Ilya Rodionov [@ris58h](https://github.com/ris58h)
 
 License: MIT
