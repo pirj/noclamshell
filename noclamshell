@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
 
-CLAMSHELL=$(ioreg -r -k AppleClamshellState | grep AppleClamshellState | grep Yes)
-FLAG_FILE=$TMPDIR/noclamshell.lid.closed.and.sleeping
-
-if [ "$CLAMSHELL" ]; then
-  if [[ ! -f $FLAG_FILE ]]; then
-    touch $FLAG_FILE
-    pmset sleepnow
+LID_CLOSED=$(ioreg -r -k AppleClamshellState | grep AppleClamshellState | grep Yes)
+if [ "$LID_CLOSED" ]; then
+  EXTERNAL_DISPLAY_CONNECTED=$(pmset -g powerstate | grep AppleDisplay | grep USEABLE)
+  if [ "$EXTERNAL_DISPLAY_CONNECTED" ]; then
+    AWAKE=$(pmset -g powerstate | grep IODisplayWrangler | grep USEABLE)
+    if [ "$AWAKE" ]; then
+      pmset sleepnow
+    fi
   fi
-else
-  rm -f $FLAG_FILE
 fi
