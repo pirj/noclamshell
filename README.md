@@ -26,7 +26,7 @@ It periodically checks if lid is closed and puts machine to sleep. Nothing fancy
 
 ## Installation
 
-    brew install pirj/homebrew-noclamshell/noclamshell
+    brew install pirj/noclamshell/noclamshell
     brew services start noclamshell
 
 ## Uninstall
@@ -34,7 +34,7 @@ It periodically checks if lid is closed and puts machine to sleep. Nothing fancy
 In case utility didn't work as you expected, you can turn it off:
 
     brew services stop noclamshell
-    brew uninstall pirj/homebrew-noclamshell/noclamshell
+    brew uninstall pirj/noclamshell/noclamshell
 
 Please drop me a note on what went wrong!
 
