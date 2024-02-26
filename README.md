@@ -29,6 +29,8 @@ It periodically checks if lid is closed and puts machine to sleep. Nothing fancy
     brew install pirj/noclamshell/noclamshell
     brew services start noclamshell
 
+Note that it may take several seconds for the monitors to turn off once the machine is closed.
+
 ## Uninstall
 
 In case utility didn't work as you expected, you can turn it off:
