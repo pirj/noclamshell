@@ -26,6 +26,8 @@ It periodically checks if lid is closed and puts machine to sleep. Nothing fancy
 
 ## Installation
 
+Using [a custom tap](https://github.com/pirj/homebrew-noclamshell):
+
     brew install pirj/noclamshell/noclamshell
     brew services start noclamshell
 
