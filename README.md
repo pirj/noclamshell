@@ -2,6 +2,8 @@ Tired of the annoying iOS clamshell mode when MacBook doesn't go to sleep when y
 
 Use this!
 
+Known to work on on Apple Silicon macs, and older Intel macs. No issues for years.
+
 # No clamshell mode
 
 What is a clamshell mode? As per [this doc](https://support.apple.com/en-us/HT201834):
