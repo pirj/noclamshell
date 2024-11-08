@@ -8,7 +8,7 @@ Known to work on on Apple Silicon macs, and older Intel macs. No issues for year
 
 What is a clamshell mode? As per [this doc](https://support.apple.com/en-us/HT201834):
 
-    You can use an external display or projector with a Mac notebook while its built-in display is closed. This is known as "closed-clamshell" or "closed-display" mode.
+> You can use an external display or projector with a Mac notebook while its built-in display is closed. This is known as "closed-clamshell" or "closed-display" mode.
 
 Basically, when you're connected with power adapter and there's an external monitor connected, when you close the lid, nothing happens.
 
