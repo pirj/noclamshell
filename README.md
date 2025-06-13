@@ -1,4 +1,4 @@
-Tired of the annoying iOS clamshell mode when MacBook doesn't go to sleep when you close the lid with an external monitor connected?
+Tired of the annoying MacOS clamshell mode when MacBook doesn't go to sleep when you close the lid with an external monitor connected?
 
 Use this!
 
