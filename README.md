@@ -58,5 +58,6 @@ Contributors:
  - Claus F. Strasburger [@cfstras](https://github.com/cfstras)
  - Ben Bosman [@benbosman](https://github.com/benbosman)
  - Ilya Rodionov [@ris58h](https://github.com/ris58h)
+ - Claus F. Strasburger [lursyy](https://github.com/lursyy)
 
 License: MIT
