@@ -10,8 +10,10 @@ if [ "$LID_CLOSED" ]; then
     fi
   fi
 
-  NUM_DEVICE_PROXY=$(pmset -g powerstate | grep DCPDPDeviceProxy | wc -l)
-  ARM_AWAKE=$((NUM_DEVICE_PROXY < 4))
+  NUM_DEVICE_PROXY=$(pmset -g powerstate | grep -c DCPDPDeviceProxy)
+  NUM_SERVICE_PROXY=$(pmset -g powerstate | grep -c DCPDPServiceProxy)
+  ARM_AWAKE=$(( 0 < NUM_DEVICE_PROXY && NUM_DEVICE_PROXY < 4 ||
+        0 < NUM_SERVICE_PROXY && NUM_SERVICE_PROXY < 4 ))
   if [ "$ARM_AWAKE" ]; then
     pmset sleepnow
   fi
